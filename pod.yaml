@@ -15,8 +15,11 @@ spec:
       labels:
         app: nginx
     spec:
+      initContainers:
+      - name: test
+        image: harbor.altair-lab.com/chloe-ocp/argocd:latest
       containers:
       - name: nginx
-        image: harbor.altair-lab.com/chloe-ocp/argocd:latest
+        image: nginx:1.14.2
         ports:
         - containerPort: 80

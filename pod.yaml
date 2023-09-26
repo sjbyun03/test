@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: argocd
+  namespace: default
+spec:
+  containers:
+  - name: test
+    image: harbor.altair-lab.com/chloe-ocp/argocd:latest
